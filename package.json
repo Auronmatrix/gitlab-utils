@@ -1,0 +1,23 @@
+{
+  "name": "gitlabutils",
+  "version": "1.0.0",
+  "description": "Useful scripts and utilities using the gitlab api",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aubrey Oosthuizen",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@gitbeaker/node": "19.7.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0",
+    "recursive-copy": "^2.0.10",
+    "simple-git": "^2.7.0",
+    "ts-node": "^8.10.2"
+  },
+  "devDependencies": {
+    "tsc": "^1.20150623.0"
+  }
+}
