@@ -27,24 +27,23 @@ const main = async () => {
   await runGitStripPerProject(summary)
 }
 
+// const runNewPipelinePerTag = async (summary) => {
+//   let runs = glc.mapSummaryToPipelineRuns(summary)
+//   for (let run of runs) {
+//     await glc.runPipelineForTag(run.projectId, run.tagName)
+//     console.log(run.groupName, run.projectName, run.tagName)
+//     await snooze(1000)
+//   }
+// }
 
-const runNewPipelinePerTag = async (summary) => {
-  let runs = glc.mapSummaryToPipelineRuns(summary)
-  for (let run of runs) {
-    await glc.runPipelineForTag(run.projectId, run.tagName)
-    console.log(run.groupName, run.projectName, run.tagName)
-    await snooze(1000)
-  }
-}
+// const cancelProjectPipelines = async (summary) => {
+//   await glc.cancelPipelinesForAllProjects(summary)
+// }
 
-const cancelProjectPipelines = async (summary) => {
-  await glc.cancelPipelinesForAllProjects(summary)
-}
-
-const getTagsByProjectId = async (projectId) => {
-  const project = await glc.getProjectTags(projectId)
-  console.log(project)
-}
+// const getTagsByProjectId = async (projectId) => {
+//   const project = await glc.getProjectTags(projectId)
+//   console.log(project)
+// }
 
 const runGitStripPerProject = async (summary) => {
   for (let group of summary) {
